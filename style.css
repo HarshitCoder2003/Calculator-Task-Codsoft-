@@ -1,0 +1,96 @@
+/* Updated styles for calculator interface */
+
+/* General reset and box model */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.3s ease; /* Adjusted transition duration */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Modified font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2; /* Changed overall background color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(111.1deg, rgb(0, 40, 70) -2.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123)100.2%); /* Changed calculator background color */
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color:purple;
+}
+
+.theme-toggler::before {
+    content: '';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color:aquamarine;
+    z-index: -1;
+    transition: all 0.3s ease; /* Added transition */
+}
+
+.theme-toggler.active::after{
+    left: 100%;
+    background-color:purple;
+}
+
+#display {
+    margin: 0 10px;
+    height: 80px; /* Adjusted height of the display */
+    width: auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 24px; /* Modified font size */
+    margin-bottom: 10px; /* Adjusted margin */
+    overflow-x: auto;
+}
+
+button {
+    height: 50px; /* Adjusted button height */
+    width: 50px; /* Adjusted button width */
+    border: 0;
+    border-radius: 50%; /* Circular buttons */
+    margin: 3px;
+    font-size: 18px; /* Modified font size */
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+/* ... (Remaining styles for light and dark theme) */
+
+
+    
